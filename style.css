@@ -1,0 +1,92 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+.sidebar {
+    background-color: rgb(24, 9, 59);
+    position: fixed;
+    left: -200px;
+    width: 200px;
+    height: 100%;
+    transition: all .5s ease;
+}
+body {
+    font-family:Arial, Helvetica, sans-serif
+}
+.sidebar ul li {
+    list-style-type: none;
+}
+.sidebar header {
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    background-color: gray;
+    user-select: none;
+    padding-bottom: 8px;
+}
+.sidebar ul a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    text-decoration: none;
+}
+ul li:hover a {
+    padding-left: 30px;
+    opacity: 0.3;
+}
+.sidebar ul a {
+    margin-right: 16px;
+}
+#check {
+    display: none;
+}
+label #btn,label #cancel {
+    position: absolute;
+    cursor: pointer;
+}
+label #cancel {
+    top: 28px;
+    font-size: 20px;
+    z-index: 1111;
+    left: 28px;
+    color: white;
+    padding: 5px 5px;
+    background-color: orange;
+    border-radius: 30%;
+    margin-top: -12px;
+}
+label #cancel:hover {
+    top: 28px;
+    font-size: 20px;
+    z-index: 1111;
+    left: 28px;
+    color: orange;
+    background-color: white;
+    box-shadow: 3px 6px;
+}
+#check:checked ~ .sidebar {
+    left: 0;
+}
+.topbar {
+    text-align: center;
+    background-color: black;
+    color: white;
+    height: 80px;
+    padding-top: 30px;
+}
+.topbar span {
+    padding: 5px 5px;
+    background-color: orange;
+    border-radius: 30px;
+}
